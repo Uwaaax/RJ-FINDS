@@ -1,0 +1,312 @@
+:root {
+    --blue: #80A1BA;
+    --teal: #91C4C3;
+    --light: #BBDCE5;
+    --peach: #F8F7BA;
+    --retro: #FFFCB8;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(shop.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    float: left;
+    padding-left: 1.25rem;
+    font-family: 'Lucida Sans', Geneva, sans-serif;
+    letter-spacing: 0;
+    color: white;
+}
+
+.icon {
+    float: left;
+    padding-top: 1.25rem;
+    color: white;
+}
+
+nav {
+    border: 0.063rem solid #272626;
+    text-align: right;
+    padding: 1.25rem;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: 0.5s ease;
+    color: white;
+    padding: 0.625rem;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.188rem;
+    background-color: var(--blue);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.content {
+    padding-top: 12.5rem;
+    text-align: center;
+}
+
+.content p {
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.content span {
+    color: var(--blue);
+    font-size: 6.25rem;
+    text-shadow: 0 0.25rem 0.75rem;
+}
+
+#home {
+    height: 120vh;
+    background-image: url(shop.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+button {
+    width: 8.75rem;
+    height: 2.5rem;
+    box-shadow: 0 0.375rem 0.625rem var(--teal);
+    border-radius: 3.125rem;
+    background: var(--blue);
+    border: 0.063rem solid var(--blue);
+    transition: all 0.7s ease;
+}
+
+.btn {
+    padding-top: 1.875rem;
+    text-align: center;
+}
+
+.btn a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: black;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: white;
+    color: white;
+}
+
+#about {
+    background: #ffffff;
+    color: #000;
+    text-align: center;
+    padding: 3.75rem 1.25rem;
+}
+
+#about h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.about-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+}
+
+.about-box {
+    background: #fff7c2;
+    padding: 1.5625rem;
+    border-radius: 0.625rem;
+    width: 18.75rem;
+    transition: 0.3s ease;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.about-box:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.2);
+}
+
+.about-box h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+}
+
+.about-box p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+#contact {
+    background: #f5deb3;
+    text-align: center;
+    padding: 3.125rem 1.25rem 1.25rem;
+}
+
+#contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5625rem;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 1.75rem;
+    margin: 0 0.625rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.contact-info p {
+    margin: 0.3125rem 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+footer {
+    background: #f0d7a7;
+    margin-top: 1.875rem;
+    padding: 0.625rem;
+    font-size: 0.9rem;
+    color: #000;
+    border-top: 0.063rem solid #d9b97b;
+}
+
+@media (max-width: 48rem) {
+    .about-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-box {
+        width: 80%;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+}
+
+h2.brand-title {
+    font-size: 1.8rem;
+    margin: 1.25rem 0 0.625rem 1.875rem;
+    color: #f9d71c;
+    font-weight: 700;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1.25rem;
+    padding: 1.25rem 2.5rem;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 13.75rem;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.375rem 0.9375rem rgba(255, 255, 255, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: contain;
+    background: #fff;
+    padding: 0.625rem;
+}
+
+.product-card p {
+    margin: 0;
+    background-color: #fcf04f;
+    color: #000;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    font-weight: bold;
+}
+
+.buy-now {
+    background-color: #0c0c0c;
+    color: #fffdfd;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #dad9d5;
+}
+
+.buy-now:active {
+    transform: scale(0.98);
+}
+
+.buy-now:focus {
+    outline: none;
+}
+
+#home:target,
+#about:target,
+#shop:target,
+#contact:target {
+    scroll-behavior: smooth;
+}
